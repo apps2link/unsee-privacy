@@ -3,226 +3,385 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101827">
-<meta name="description" content="سياسة الخصوصية الرسمية لتطبيق أنسي Unsee.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f8f2">
+<meta name="description" content="سياسة الخصوصية الرسمية لتطبيق أنسي Unsee للأذكار والتذكير بالله.">
 <title>سياسة الخصوصية | أنسي Unsee</title>
 
 <style>
-*{box-sizing:border-box}
-body{
-margin:0;
-background:#0b1220;
-color:#edf4f4;
-font-family:Arial,Tahoma,sans-serif;
-line-height:1.9
+:root {
+  --green:#276b53;
+  --green2:#3c8a6d;
+  --gold:#c6a66a;
+  --bg:#f7f8f2;
+  --white:#ffffff;
+  --text:#29352f;
+  --muted:#78847c;
+  --border:#e8ede7;
 }
-header{
-padding:45px 20px;
-text-align:center;
-background:linear-gradient(135deg,#173c3a,#172338)
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Tahoma,Arial,sans-serif;
+  line-height:1.9;
 }
-.logo{
-font-size:45px;
-color:#a7e5c5;
-font-weight:bold
+
+.hero {
+  background:linear-gradient(135deg,#e6f1e8,#f7f4e9);
+  padding:55px 20px 45px;
+  text-align:center;
+  border-bottom:1px solid #e4eadf;
 }
-h1{margin:5px;font-size:32px}
-header p{color:#c4d8d2}
-nav{text-align:center;padding:20px}
-.lang-radio{
-position:absolute;
-opacity:0;
-pointer-events:none
+
+.logo {
+  width:78px;
+  height:78px;
+  margin:0 auto 14px;
+  border-radius:25px;
+  background:linear-gradient(145deg,#398467,#205b45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:43px;
+  font-weight:bold;
+  box-shadow:0 8px 22px #276b5330;
 }
-nav label{
-display:inline-block;
-padding:11px 25px;
-border-radius:10px;
-margin:5px;
-background:#20364a;
-color:white;
-cursor:pointer
+
+.hero h1 {
+  margin:0;
+  font-size:34px;
+  color:var(--green);
 }
-#showAr:checked ~ nav label[for="showAr"],
-#showEn:checked ~ nav label[for="showEn"]{
-background:#a7e5c5;
-color:#10251e;
-font-weight:bold
+
+.hero p {
+  color:#68766c;
+  margin:7px 0;
 }
-main{
-max-width:850px;
-margin:20px auto;
-padding:0 15px
+
+.subtitle {
+  font-size:14px;
 }
-section{
-background:#142237;
-border:1px solid #293d50;
-border-radius:15px;
-padding:22px;
-margin-bottom:16px
+
+.version {
+  display:inline-block;
+  margin-top:15px;
+  padding:5px 15px;
+  background:#ffffffa8;
+  border:1px solid #dce7dc;
+  border-radius:30px;
+  color:var(--green);
+  font-size:12px;
 }
-h2{color:#a7e5c5;font-size:21px}
-p,li{color:#d6e0e9}
-footer{
-text-align:center;
-padding:30px;
-color:#91a5b8
+
+.container {
+  width:100%;
+  max-width:850px;
+  margin:0 auto;
+  padding:25px 18px 45px;
 }
-a{color:#a7e5c5}
-#showEn:checked ~ #ar{display:none}
-#showEn:checked ~ #en{
-display:block;
-direction:ltr;
-text-align:left
+
+.language {
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:25px;
 }
-#showAr:checked ~ #en{display:none}
-#showAr:checked ~ #ar{display:block}
+
+.language button {
+  border:1px solid #dce6dc;
+  background:#fff;
+  color:var(--green);
+  padding:10px 25px;
+  border-radius:12px;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.language button.active {
+  background:var(--green);
+  color:white;
+  border-color:var(--green);
+  box-shadow:0 5px 15px #276b5325;
+}
+
+.content-card {
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:23px 25px;
+  margin-bottom:15px;
+  box-shadow:0 4px 15px #243c2c08;
+}
+
+.content-card h2 {
+  color:var(--green);
+  font-size:19px;
+  margin:0 0 10px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+
+.content-card h2::before {
+  content:"";
+  width:4px;
+  height:22px;
+  background:var(--gold);
+  border-radius:5px;
+  display:inline-block;
+}
+
+.content-card p {
+  margin:7px 0;
+  color:#536158;
+  font-size:15px;
+}
+
+.content-card ul {
+  padding-inline-start:25px;
+  color:#536158;
+}
+
+.content-card li {
+  margin:5px 0;
+}
+
+.contact {
+  text-align:center;
+  background:#edf5ee;
+  border:1px solid #dcebdd;
+}
+
+.contact a {
+  color:var(--green);
+  font-weight:bold;
+  text-decoration:none;
+  font-size:17px;
+}
+
+.footer {
+  text-align:center;
+  padding:25px 10px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer strong {
+  color:var(--green);
+}
+
+[hidden] {
+  display:none !important;
+}
+
+@media(max-width:600px) {
+  .hero {padding:40px 15px 32px;}
+  .hero h1 {font-size:29px;}
+  .container {padding:20px 12px 35px;}
+  .content-card {padding:19px 17px;}
+  .content-card h2 {font-size:18px;}
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">أ</div>
-<h1>أنسي | Unsee</h1>
-<p>رفيقك اليومي للذكر والتذكير بالله</p>
-<p>سياسة الخصوصية | Privacy Policy</p>
+<header class="hero">
+  <div class="logo">أ</div>
+  <h1>أنسي | Unsee</h1>
+  <p>رفيقك اليومي للذكر والتذكير بالله</p>
+  <p class="subtitle" id="heroSubtitle">سياسة الخصوصية وحماية بيانات المستخدمين</p>
+  <span class="version" id="updated">آخر تحديث: 7 نوفمبر 2026</span>
 </header>
 
-<input type="radio" name="language" id="showAr" class="lang-radio" checked>
-<input type="radio" name="language" id="showEn" class="lang-radio">
+<div class="container">
 
-<nav>
-<label for="showAr">العربية</label>
-<label for="showEn">English</label>
-</nav>
+<div class="language">
+  <button id="arabicButton" class="active" onclick="changeLanguage('ar')">العربية</button>
+  <button id="englishButton" onclick="changeLanguage('en')">English</button>
+</div>
 
-<main id="ar">
+<!-- Arabic -->
+<main id="arabicContent">
 
-<section>
+<section class="content-card">
 <h2>1. مقدمة</h2>
-<p>نحن في تطبيق أنسي (Unsee) نحترم خصوصية المستخدمين ونحرص على حماية بياناتهم. توضح هذه السياسة طبيعة المعلومات التي قد يتعامل معها التطبيق وكيفية استخدامها وحمايتها.</p>
+<p>نرحب بك في تطبيق أنسي (Unsee). نحن نحترم خصوصيتك ونحرص على حماية معلوماتك. توضح سياسة الخصوصية هذه كيفية تعامل التطبيق مع المعلومات والبيانات أثناء استخدامك لخدماته وميزاته.</p>
 </section>
 
-<section>
+<section class="content-card">
 <h2>2. المعلومات والبيانات</h2>
-<p>لا تتطلب الوظائف الأساسية للتطبيق إنشاء حساب أو تسجيل الدخول.</p>
-<p>قد يتعامل التطبيق مع بيانات مثل الأذكار والتسبيح والعدادات والإحصائيات وتفضيلات المظهر وإعدادات التنبيهات والودجت والفقاعة العائمة.</p>
-<p>يتم تخزين البيانات التي ينشئها التطبيق محليًا على الجهاز، بحسب طبيعة النسخة المثبتة.</p>
-</section>
-
-<section>
-<h2>3. أذونات التطبيق</h2>
-<p>قد يستخدم التطبيق بعض أذونات Android لتشغيل وظائفه، ومنها:</p>
+<p>لا تتطلب الوظائف الأساسية لتطبيق أنسي إنشاء حساب أو تسجيل الدخول.</p>
+<p>قد يتعامل التطبيق مع بيانات مرتبطة باستخدامه، مثل:</p>
 <ul>
-<li>الإشعارات: لإرسال التذكيرات والتنبيهات.</li>
-<li>الظهور فوق التطبيقات الأخرى: لتشغيل الفقاعة العائمة عند تفعيلها.</li>
-<li>التشغيل في الخلفية: لدعم وظائف التذكير والفقاعة العائمة.</li>
-<li>الاهتزاز: للتنبيهات والتفاعلات.</li>
+<li>الأذكار والتسبيح والعدادات.</li>
+<li>إحصائيات الاستخدام والإنجازات.</li>
+<li>تفضيلات المظهر والألوان والسمات.</li>
+<li>إعدادات الإشعارات والتذكيرات.</li>
+<li>إعدادات الودجت والفقاعة العائمة.</li>
 </ul>
-<p>يمكن للمستخدم إدارة هذه الأذونات من إعدادات جهازه.</p>
+<p>يتم تخزين البيانات التي ينشئها التطبيق محليًا على الجهاز بحسب طبيعة النسخة المثبتة.</p>
 </section>
 
-<section>
-<h2>4. مشاركة البيانات</h2>
-<p>لا نبيع البيانات الشخصية للمستخدمين. وقد تختلف طريقة معالجة البيانات إذا تضمنت النسخة المثبتة خدمات خارجية مثل الإعلانات أو التحليلات أو تقارير الأعطال.</p>
-<p>في حال استخدام خدمات خارجية، سيتم توضيح طبيعة البيانات التي تجمعها والجهات التي تتعامل معها وأغراض استخدامها.</p>
+<section class="content-card">
+<h2>3. أذونات التطبيق</h2>
+<p>قد يطلب التطبيق بعض أذونات نظام Android لتشغيل ميزاته، ومنها:</p>
+<ul>
+<li><strong>الإشعارات:</strong> لإرسال التذكيرات والتنبيهات التي يختار المستخدم تفعيلها.</li>
+<li><strong>الظهور فوق التطبيقات الأخرى:</strong> لتشغيل الفقاعة العائمة عند تفعيلها ومنح الإذن.</li>
+<li><strong>التشغيل في الخلفية:</strong> لدعم بعض وظائف التذكير والفقاعة العائمة.</li>
+<li><strong>الاهتزاز:</strong> لتقديم التنبيهات والتفاعلات المدعومة.</li>
+</ul>
+<p>يمكن للمستخدم إدارة الأذونات من إعدادات جهاز Android، وقد يؤدي إيقاف بعضها إلى تعطيل الميزة المرتبطة بها.</p>
 </section>
 
-<section>
+<section class="content-card">
+<h2>4. مشاركة البيانات والخدمات الخارجية</h2>
+<p>لا نبيع البيانات الشخصية للمستخدمين.</p>
+<p>قد تختلف طريقة معالجة البيانات إذا تضمنت النسخة المثبتة خدمات خارجية مثل الإعلانات أو التحليلات أو تقارير الأعطال. وفي هذه الحالة يجب توضيح الخدمات المستخدمة وأنواع البيانات التي تتعامل معها وأغراض استخدامها.</p>
+</section>
+
+<section class="content-card">
 <h2>5. حماية البيانات</h2>
-<p>نعمل على حماية المعلومات التي يتعامل معها التطبيق باستخدام وسائل الحماية المتاحة في نظام Android. ولا توجد وسيلة إلكترونية تضمن الحماية المطلقة.</p>
+<p>نعمل على حماية المعلومات التي يتعامل معها التطبيق باستخدام وسائل الحماية المتاحة في نظام Android، وبما يتناسب مع طبيعة التطبيق. ومع ذلك، لا توجد وسيلة إلكترونية تضمن الحماية المطلقة.</p>
 </section>
 
-<section>
+<section class="content-card">
 <h2>6. حذف البيانات</h2>
-<p>يمكن للمستخدم حذف البيانات المخزنة محليًا عن طريق مسح بيانات التطبيق من إعدادات Android أو إلغاء تثبيته. وقد يؤدي ذلك إلى فقدان الإعدادات والإحصائيات المحفوظة.</p>
+<p>يمكن للمستخدم حذف البيانات المخزنة محليًا عن طريق مسح بيانات التطبيق من إعدادات Android أو إلغاء تثبيته.</p>
+<p>قد يؤدي ذلك إلى فقدان الإحصائيات والإعدادات المحفوظة على الجهاز.</p>
 </section>
 
-<section>
+<section class="content-card">
 <h2>7. خصوصية الأطفال</h2>
-<p>لا يتطلب التطبيق إنشاء حساب أو تقديم معلومات شخصية لاستخدام وظائفه الأساسية. ولا نهدف إلى جمع بيانات شخصية من الأطفال دون الحصول على الموافقات المطلوبة.</p>
+<p>لا يتطلب التطبيق تقديم معلومات شخصية أو إنشاء حساب لاستخدام وظائفه الأساسية. ولا نهدف إلى جمع بيانات شخصية من الأطفال دون الحصول على الموافقات المطلوبة قانونيًا.</p>
 </section>
 
-<section>
-<h2>8. تحديث السياسة</h2>
-<p>قد يتم تحديث سياسة الخصوصية عند تغيير وظائف التطبيق أو طريقة التعامل مع البيانات. وسيتم نشر التحديثات في هذه الصفحة.</p>
+<section class="content-card">
+<h2>8. تحديثات سياسة الخصوصية</h2>
+<p>قد نقوم بتحديث سياسة الخصوصية من وقت لآخر لمواكبة التغييرات في وظائف التطبيق أو طريقة التعامل مع البيانات. وسيتم نشر النسخة المحدثة على هذه الصفحة مع تعديل تاريخ آخر تحديث.</p>
 </section>
 
-<section>
+<section class="content-card contact">
 <h2>9. التواصل معنا</h2>
-<p>للاستفسارات المتعلقة بالخصوصية، يمكن التواصل معنا عبر البريد الإلكتروني:</p>
-<p><a href="mailto:alkheerfe@gmail.com">alkheerfe@gmail.com</a></p>
+<p>إذا كان لديك أي استفسار أو سؤال يتعلق بالخصوصية أو حماية البيانات، يمكنك التواصل معنا عبر البريد الإلكتروني:</p>
+<a href="mailto:alkheerfe@gmail.com">alkheerfe@gmail.com</a>
 </section>
 
 </main>
 
-<main id="en" style="display:none">
+<!-- English -->
+<main id="englishContent" hidden>
 
-<section>
+<section class="content-card">
 <h2>1. Introduction</h2>
-<p>At Unsee, we respect our users' privacy and are committed to protecting their information. This policy explains the information the app may process and how it is used and protected.</p>
+<p>Welcome to Unsee. We respect your privacy and are committed to protecting your information. This Privacy Policy explains how the app handles information and data while you use its services and features.</p>
 </section>
 
-<section>
+<section class="content-card">
 <h2>2. Information and Data</h2>
-<p>The core features of the app do not require account creation or sign-in.</p>
-<p>The app may process data such as adhkar, tasbeeh counts, counters, statistics, appearance preferences, notification settings, widgets, and floating bubble settings.</p>
+<p>The core features of Unsee do not require account creation or sign-in.</p>
+<p>The app may process information related to its use, such as:</p>
+<ul>
+<li>Adhkar, Tasbeeh, and counters.</li>
+<li>Usage statistics and achievements.</li>
+<li>Appearance, colors, and theme preferences.</li>
+<li>Notification and reminder settings.</li>
+<li>Widget and floating bubble settings.</li>
+</ul>
 <p>Data created by the app is stored locally on the device, depending on the installed version.</p>
 </section>
 
-<section>
+<section class="content-card">
 <h2>3. App Permissions</h2>
-<p>The app may use Android permissions to provide its features, including:</p>
+<p>The app may request certain Android permissions to provide its features, including:</p>
 <ul>
-<li>Notifications: To deliver reminders and alerts.</li>
-<li>Display over other apps: To display the floating bubble when enabled.</li>
-<li>Background operation: To support reminders and floating bubble features.</li>
-<li>Vibration: For supported alerts and interactions.</li>
+<li><strong>Notifications:</strong> To deliver reminders and alerts enabled by the user.</li>
+<li><strong>Display over other apps:</strong> To show the floating bubble when enabled and permission is granted.</li>
+<li><strong>Background operation:</strong> To support certain reminder and floating bubble features.</li>
+<li><strong>Vibration:</strong> For supported alerts and interactions.</li>
 </ul>
-<p>Users can manage these permissions through Android settings.</p>
+<p>Users can manage permissions through Android settings. Disabling certain permissions may affect related features.</p>
 </section>
 
-<section>
-<h2>4. Data Sharing</h2>
-<p>We do not sell users' personal information. Data handling may differ if the installed version includes third-party services such as advertising, analytics, or crash reporting.</p>
-<p>If third-party services are used, we will explain the types of data collected, the service providers involved, and the purposes of processing.</p>
+<section class="content-card">
+<h2>4. Data Sharing and Third-Party Services</h2>
+<p>We do not sell users' personal information.</p>
+<p>Data handling may differ if the installed version includes third-party services such as advertising, analytics, or crash reporting. In such cases, the services used, the types of data they process, and their purposes must be disclosed.</p>
 </section>
 
-<section>
+<section class="content-card">
 <h2>5. Data Security</h2>
-<p>We take reasonable steps to protect information processed by the app using Android security features. However, no electronic method can guarantee absolute security.</p>
+<p>We take reasonable steps to protect information processed by the app using security features available in Android. However, no electronic storage or transmission method can guarantee absolute security.</p>
 </section>
 
-<section>
+<section class="content-card">
 <h2>6. Data Deletion</h2>
-<p>Users can delete locally stored data by clearing the app data through Android settings or uninstalling the app. This may remove saved settings and statistics.</p>
+<p>Users can delete locally stored data by clearing the app data through Android settings or uninstalling the app.</p>
+<p>This may permanently remove statistics and settings saved on the device.</p>
 </section>
 
-<section>
+<section class="content-card">
 <h2>7. Children's Privacy</h2>
-<p>The app does not require account creation or personal information to use its core features. We do not intend to collect children's personal information without required consent.</p>
+<p>The app does not require personal information or account creation to use its core features. We do not intend to collect children's personal information without legally required consent.</p>
 </section>
 
-<section>
-<h2>8. Policy Updates</h2>
-<p>This privacy policy may be updated when app features or data practices change. Updates will be published on this page.</p>
+<section class="content-card">
+<h2>8. Privacy Policy Updates</h2>
+<p>We may update this Privacy Policy from time to time to reflect changes in app features or data practices. The updated version will be published on this page with a revised update date.</p>
 </section>
 
-<section>
+<section class="content-card contact">
 <h2>9. Contact Us</h2>
-<p>For privacy-related questions, please contact us at:</p>
-<p><a href="mailto:alkheerfe@gmail.com">alkheerfe@gmail.com</a></p>
+<p>If you have any questions or concerns regarding privacy or data protection, you can contact us by email:</p>
+<a href="mailto:alkheerfe@gmail.com">alkheerfe@gmail.com</a>
 </section>
 
 </main>
 
-<footer>
-Unsee | Privacy Policy<br>
+</div>
+
+<footer class="footer">
+<strong>Unsee | أنسي</strong><br>
 com.unsee.app<br>
-Last updated: November 7, 2026
+Privacy Policy · 2026
 </footer>
+
+<script>
+function changeLanguage(language) {
+
+  const arabic = language === 'ar';
+
+  document.getElementById('arabicContent').hidden = !arabic;
+  document.getElementById('englishContent').hidden = arabic;
+
+  document.getElementById('arabicButton').classList.toggle('active', arabic);
+  document.getElementById('englishButton').classList.toggle('active', !arabic);
+
+  document.documentElement.lang = arabic ? 'ar' : 'en';
+  document.documentElement.dir = arabic ? 'rtl' : 'ltr';
+
+  document.getElementById('heroSubtitle').textContent =
+    arabic
+    ? 'سياسة الخصوصية وحماية بيانات المستخدمين'
+    : 'Privacy Policy and User Data Protection';
+
+  document.getElementById('updated').textContent =
+    arabic
+    ? 'آخر تحديث: 7 نوفمبر 2026'
+    : 'Last updated: November 7, 2026';
+
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
 
 </body>
 </html>
