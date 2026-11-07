@@ -5,39 +5,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101827">
+<meta name="description" content="سياسة الخصوصية الرسمية لتطبيق أنسي Unsee.">
 <title>سياسة الخصوصية | أنسي Unsee</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#0b1220;color:#edf4f4;font-family:Arial,Tahoma,sans-serif;line-height:1.9}
-header{padding:45px 20px;text-align:center;background:linear-gradient(135deg,#173c3a,#172338)}
-.logo{font-size:45px;color:#a7e5c5;font-weight:bold}
+body{
+margin:0;
+background:#0b1220;
+color:#edf4f4;
+font-family:Arial,Tahoma,sans-serif;
+line-height:1.9
+}
+header{
+padding:45px 20px;
+text-align:center;
+background:linear-gradient(135deg,#173c3a,#172338)
+}
+.logo{
+font-size:45px;
+color:#a7e5c5;
+font-weight:bold
+}
 h1{margin:5px;font-size:32px}
 header p{color:#c4d8d2}
 nav{text-align:center;padding:20px}
-button{padding:11px 25px;border:0;border-radius:10px;margin:5px;background:#20364a;color:white;font-size:16px;cursor:pointer}
-button.active{background:#a7e5c5;color:#10251e;font-weight:bold}
-main{max-width:850px;margin:20px auto;padding:0 15px}
-section{background:#142237;border:1px solid #293d50;border-radius:15px;padding:22px;margin-bottom:16px}
+.lang-radio{
+position:absolute;
+opacity:0;
+pointer-events:none
+}
+nav label{
+display:inline-block;
+padding:11px 25px;
+border-radius:10px;
+margin:5px;
+background:#20364a;
+color:white;
+cursor:pointer
+}
+#showAr:checked ~ nav label[for="showAr"],
+#showEn:checked ~ nav label[for="showEn"]{
+background:#a7e5c5;
+color:#10251e;
+font-weight:bold
+}
+main{
+max-width:850px;
+margin:20px auto;
+padding:0 15px
+}
+section{
+background:#142237;
+border:1px solid #293d50;
+border-radius:15px;
+padding:22px;
+margin-bottom:16px
+}
 h2{color:#a7e5c5;font-size:21px}
 p,li{color:#d6e0e9}
-footer{text-align:center;padding:30px;color:#91a5b8}
-.note{background:#24394a;padding:15px;border-radius:10px}
+footer{
+text-align:center;
+padding:30px;
+color:#91a5b8
+}
 a{color:#a7e5c5}
-[hidden]{display:none!important}
+#showEn:checked ~ #ar{display:none}
+#showEn:checked ~ #en{
+display:block;
+direction:ltr;
+text-align:left
+}
+#showAr:checked ~ #en{display:none}
+#showAr:checked ~ #ar{display:block}
 </style>
 </head>
+
 <body>
 
 <header>
 <div class="logo">أ</div>
 <h1>أنسي | Unsee</h1>
-<p id="subtitle">رفيقك اليومي للذكر والتذكير بالله</p>
+<p>رفيقك اليومي للذكر والتذكير بالله</p>
 <p>سياسة الخصوصية | Privacy Policy</p>
 </header>
 
+<input type="radio" name="language" id="showAr" class="lang-radio" checked>
+<input type="radio" name="language" id="showEn" class="lang-radio">
+
 <nav>
-<button id="arBtn" class="active" onclick="lang('ar')">العربية</button>
-<button id="enBtn" onclick="lang('en')">English</button>
+<label for="showAr">العربية</label>
+<label for="showEn">English</label>
 </nav>
 
 <main id="ar">
@@ -69,7 +127,7 @@ a{color:#a7e5c5}
 <section>
 <h2>4. مشاركة البيانات</h2>
 <p>لا نبيع البيانات الشخصية للمستخدمين. وقد تختلف طريقة معالجة البيانات إذا تضمنت النسخة المثبتة خدمات خارجية مثل الإعلانات أو التحليلات أو تقارير الأعطال.</p>
-<p class="note">يجب مراجعة خدمات ومكتبات النسخة النهائية قبل النشر للتأكد من الإفصاح الصحيح عن أي بيانات تجمعها جهات خارجية.</p>
+<p>في حال استخدام خدمات خارجية، سيتم توضيح طبيعة البيانات التي تجمعها والجهات التي تتعامل معها وأغراض استخدامها.</p>
 </section>
 
 <section>
@@ -94,13 +152,13 @@ a{color:#a7e5c5}
 
 <section>
 <h2>9. التواصل معنا</h2>
-<p>للاستفسارات المتعلقة بالخصوصية، يمكن التواصل عبر البريد الإلكتروني:</p>
-<p>alkheerfe@gmail.com</p>
+<p>للاستفسارات المتعلقة بالخصوصية، يمكن التواصل معنا عبر البريد الإلكتروني:</p>
+<p><a href="mailto:alkheerfe@gmail.com">alkheerfe@gmail.com</a></p>
 </section>
 
 </main>
 
-<main id="en" hidden>
+<main id="en" style="display:none">
 
 <section>
 <h2>1. Introduction</h2>
@@ -129,7 +187,7 @@ a{color:#a7e5c5}
 <section>
 <h2>4. Data Sharing</h2>
 <p>We do not sell users' personal information. Data handling may differ if the installed version includes third-party services such as advertising, analytics, or crash reporting.</p>
-<p class="note">The final release must be checked for third-party libraries and services to ensure that all data collection is accurately disclosed.</p>
+<p>If third-party services are used, we will explain the types of data collected, the service providers involved, and the purposes of processing.</p>
 </section>
 
 <section>
@@ -155,7 +213,7 @@ a{color:#a7e5c5}
 <section>
 <h2>9. Contact Us</h2>
 <p>For privacy-related questions, please contact us at:</p>
-<p>alkheerfe@gmail.com</p>
+<p><a href="mailto:alkheerfe@gmail.com">alkheerfe@gmail.com</a></p>
 </section>
 
 </main>
@@ -165,19 +223,6 @@ Unsee | Privacy Policy<br>
 com.unsee.app<br>
 Last updated: November 7, 2026
 </footer>
-
-<script>
-function lang(x){
-let ar=x==='ar';
-document.documentElement.lang=x;
-document.documentElement.dir=ar?'rtl':'ltr';
-document.getElementById('ar').hidden=!ar;
-document.getElementById('en').hidden=ar;
-document.getElementById('arBtn').classList.toggle('active',ar);
-document.getElementById('enBtn').classList.toggle('active',!ar);
-document.getElementById('subtitle').textContent=ar?'رفيقك اليومي للذكر والتذكير بالله':'Your daily companion for remembrance of Allah';
-}
-</script>
 
 </body>
 </html>
